@@ -1,0 +1,20 @@
+import numpy as np
+import math as mt
+import pandas as pd
+from matplotlib import pyplot as plt
+import time
+import numpy as np
+
+E = 20000
+fy = 25
+PS = pd.read_excel(r'C:\Users\I5-Coffee Lake\Documents\AW\Momento\Matlab\Bitolas_Perfis_Soldados.xlsx')
+ix = np.array(PS[1:131] ['rx'])
+iy = np.array(PS[1:131] ['ry'])
+Ag = np.array(PS[1:131] ['Ag'])
+h0t0 = np.array(PS[1:131] ['FLA'])
+bf2tf = np.array(PS[1:131] ['FLM'])
+h0 = np.array(PS[1:131] ['h'])
+t0 = np.array(PS[1:131] ['tw'])
+A = 1.49*((E/fy)**0.5
+
+print(t0)
