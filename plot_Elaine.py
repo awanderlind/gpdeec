@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.patches as patches
 
-PS = pd.read_excel(r'C:\Users\augus\Documents\Augusto ASUS\RESEARCH\Elaine - Dados Brutos.xlsx')
+#PS = pd.read_excel(r'C:\Users\augus\Documents\Augusto ASUS\RESEARCH\Elaine - Dados Brutos.xlsx')
+PS = pd.read_excel(r'C:\Users\I5-Coffee Lake\Documents\AW\PYTHON\PythonProjects\GPDEEC\Elaine - Dados Brutos.xlsx')
 x = np.array(PS[0:432] ['MINUTOS'])
 T = np.array(PS[0:432] ['T'])
 U = np.array(PS[0:432] ['H'])
@@ -23,7 +24,7 @@ Line4, = ax2[1].plot(x, U2, 'r--', label='Humidity (%)')
 ax1[1].set_xlabel('Time (min)', fontsize = 16)
 ax1[0].yaxis.set_label_position("left")
 #ax1[1].yaxis.set_label_position("left")
-ax1[0].set_ylabel('Temperature (°C) & Humidity (%)                          ', fontsize = 16)
+ax1[0].set_ylabel('Temperature (°C) & Humidity (%)                                                      ', fontsize = 16)
 #ax1[1].set_ylabel('T (°C) & H (%)')
 ax1[0].yaxis.grid()
 ax1[1].yaxis.grid()
@@ -73,10 +74,11 @@ ax1[1].add_patch(
 #### Legendas ####
 Gray_rec = patches.Patch(color ='gray', alpha = 0.4, label='Water spraying with radiation')
 Blank_rec = patches.Patch(color ='red', alpha = 0.10 , label='Radiation only')
-ax1[0].legend(handles=[Gray_rec, Line1, Line2], loc='center left', bbox_to_anchor=(1, 0.5))
-ax1[1].legend(handles=[Blank_rec, Line3, Line4], loc='center left', bbox_to_anchor=(1, 0.5))
-plt.xticks(fontsize = 16)
-plt.yticks(fontsize = 16)
-#ax.legend(handles=legend_elements, loc='best')
+ax1[0].legend(handles=[Gray_rec, Line1, Line2], loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 16)
+ax1[1].legend(handles=[Blank_rec, Line3, Line4], loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 16)
+#plt.xticks(fontsize = 16)
+#plt.yticks(fontsize = 16)
 
 plt.show()
+
+fig.savefig('Gráfico_Elaine.png', format='png', dpi = 300)
